@@ -17,9 +17,14 @@ public class Practicagithub1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int Numeros[]=new int[10];
-        int y =0;
         Scanner sc=new Scanner (System.in);
+        int x=11;
+        do{System.out.println("¿Cuántos numeros quieres?:");
+        x=sc.nextInt();
+        }
+        while(x>10 || x<=0);
+        int Numeros[]=new int[x];
+        int y =0;
         for(int i=0;i<Numeros.length;i++){
             System.out.println("Pon un numero:");
             int num = sc.nextInt();
