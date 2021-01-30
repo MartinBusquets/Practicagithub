@@ -18,10 +18,22 @@ public class Practicagithub1 {
     public static void main(String[] args) {
         // TODO code application logic here
         int Numeros[]=new int[10];
+        int y =0;
         Scanner sc=new Scanner (System.in);
         for(int i=0;i<Numeros.length;i++){
             System.out.println("Pon un numero:");
-            Numeros [i] = sc.nextInt();
+            int num = sc.nextInt();
+            for(y=1;y<Numeros.length-1;y++){
+            do{
+                if(num == Numeros[y]){
+                    System.out.println("Esta mál");
+                    num=sc.nextInt();
+                    y=y-1;
+                }
+            }while(num==Numeros[y]);
+           
+            }
+             Numeros[i]=num;
         }
         Arrays.sort(Numeros);
         for(int i=0;i<Numeros.length;i++){
