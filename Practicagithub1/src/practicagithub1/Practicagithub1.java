@@ -19,10 +19,7 @@ public class Practicagithub1 {
         // TODO code application logic here
         Scanner sc=new Scanner (System.in);
         int x=11;
-        do{System.out.println("¿Cuántos numeros quieres?:");
-        x=sc.nextInt();
-        }
-        while(x>10 || x<=0);
+        x = Validacion(x, sc);
         int Numeros[]=new int[x];
         int y =0;
         for(int i=0;i<Numeros.length;i++){
@@ -44,5 +41,13 @@ public class Practicagithub1 {
         for(int i=0;i<Numeros.length;i++){
             System.out.println(+Numeros[i]);
         }
+    }
+
+    public static int Validacion(int x, Scanner sc) {
+        do{System.out.println("¿Cuántos numeros quieres?:");
+        x=sc.nextInt();
+        }
+        while(x>10 || x<=0);
+        return x;
     }
 }
