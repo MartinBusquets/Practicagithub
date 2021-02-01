@@ -41,6 +41,26 @@ public class Practicagithub1 {
         for(int i=0;i<Numeros.length;i++){
             System.out.println(+Numeros[i]);
         }
+        Comprobación(sc, Numeros);
+        
+        
+        
+    }
+
+    public static void Comprobación(Scanner sc, int[] Numeros) {
+        System.out.println("Dime el numero que crees que esta:");
+        int num2=sc.nextInt();
+        
+        for(int j=0;j<Numeros.length-1;j++){
+            if(Numeros [j] == num2){
+                System.out.println("Si está");
+                break;
+            }
+            else{
+                System.out.println("El numero no está");
+                break;
+            }
+        }
     }
 
     public static int Validacion(int x, Scanner sc) {
